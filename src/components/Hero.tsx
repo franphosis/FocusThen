@@ -1,23 +1,32 @@
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-xs sm:max-w-5xl">
-      <div className="bg-[#1d1c30] rounded-xl p-8">
-        <div className="flex items-center justify-between">
-          <button>Pomodoro</button>
-          <button>Short Break</button>
-          <button>Long Break</button>
-          <button>Deep Work</button>
+    <section className="w-full mx-auto max-w-lg px-1">
+      <div className="rounded-xl p-6 bg-surface sm:p-8">
+        <div className="flex flex-wrap justify-center gap-2">
+          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57]">
+            Pomodoro
+          </button>
+          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57]">
+            Short Break
+          </button>
+          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57]">
+            Long Break
+          </button>
+          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57]">
+            Deep Work
+          </button>
         </div>
-        <h1 className="text-7xl flex justify-center items-center mb-4 tracking-wide sm:text-7xl md:text-8xl">
+        <h1 className="text-center mb-4 text-7xl tracking-wide sm:text-8xl">
           <b>25:00</b>
         </h1>
-        <div>
-          <input type="text" placeholder="What task are you focusing on?" />
+        <div className="max-w-sm mx-auto mb-2 rounded-xl bg-[#403e57] animate-fade-in stagger-1 sm:mb-4">
+          <input
+            className="w-full px-4 py-3 rounded-xl text-text placeholder:text-text-muted outline-none transition-colors animate-fade-in  focus:border-secondary focus:ring-1"
+            type="text"
+            placeholder="What task are you focusing on?"
+          />
         </div>
-        <div className="flex items-center justify-center gap-2">
-          <button className="flex justify-center items-center px-12 py-2 text-xl text-zinc-950 rounded-xl bg-[#bdb1e0]">
-            <b>Start</b>
-          </button>
+        <div className="flex items-center justify-center gap-2 sm:mb-2">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +43,10 @@ export default function Hero() {
               />
             </svg>
           </button>
-          <button>
+          <button className="flex justify-center items-center w-48 py-2 rounded-xl text-xl text-zinc-950 bg-secondary">
+            <b>Pause</b>
+          </button>
+          <button className="flex items-center transition duration-300 hover:scale-110">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -45,12 +57,12 @@ export default function Hero() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="lucide lucide-plus-icon lucide-plus"
+              className="lucide lucide-plus-icon lucide-plus size-5"
             >
               <path d="M5 12h14" />
               <path d="M12 5v14" />
             </svg>
-            30s
+            <span>30s</span>
           </button>
         </div>
       </div>

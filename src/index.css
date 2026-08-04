@@ -2,6 +2,11 @@
 
 @theme {
   --font-sans: "Geist", sans-serif;
+  --color-surface: #1d1c30;
+  --color-primary:;
+  --color-secondary: #bdb1e0;
+  --color-text: #ded4fc;
+  --color-text-muted: #918e99;
 }
 
 body {

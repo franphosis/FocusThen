@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 max-w-4xl mx-auto mb-8">
-      <nav className="flex items-center justify-between p-4 border-1 rounded border-slate-900 border-solid rounded-xl">
+    <header className="sticky top-0 z-50 max-w-4xl mx-auto mb-8 md:mb-12">
+      <nav className="flex items-center justify-between p-4">
         <span className="flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ export default function Header() {
             <strong>FocusThen</strong>
           </h2>
         </span>
-        <button className="bg-[#bdb1e0] px-3 py-2 text-zinc-950 rounded-xl">
+        <button className="bg-secondary px-3 py-2 text-zinc-950 rounded-xl">
           Soon...
         </button>
       </nav>
