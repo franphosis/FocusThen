@@ -1,9 +1,10 @@
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 max-w-4xl mx-auto mb-8 md:mb-12">
-      <nav className="flex items-center justify-between p-4">
+    // sticky top-0 z-50
+    <header className="max-w-4xl mx-auto mb-8 md:mb-12">
+      <nav className="flex items-center justify-between p-4 border-b-1">
         <span className="flex items-center gap-2">
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -18,9 +19,9 @@ export default function Header() {
             <circle cx="12" cy="12" r="10" />
             <path d="M8 12h8" />
             <path d="M12 8v8" />
-          </svg>
+          </svg> */}
 
-          <h2 className="">
+          <h2 className="text-2xl">
             <strong>FocusThen</strong>
           </h2>
         </span>

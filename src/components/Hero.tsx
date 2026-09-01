@@ -1,32 +1,25 @@
 export default function Hero() {
   return (
-    <section className="w-full mx-auto max-w-lg px-1">
-      <div className="rounded-xl p-6 bg-surface sm:p-8">
-        <div className="flex flex-wrap justify-center gap-2">
-          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57]">
-            Pomodoro
+    <section className="min-w-0 w-full mx-auto max-w-lg px-1 mb-6">
+      <div className="w-full rounded-xl p-6 bg-surface md:p-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-8">
+          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57] md:text-sm">
+            Focus duration
           </button>
-          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57]">
+          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57] md:text-sm">
             Short Break
           </button>
-          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57]">
+          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57] md:text-sm">
             Long Break
           </button>
-          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57]">
+          <button className="px-3 py-2 rounded-2xl text-text-muted text-xs transition-colors hover:bg-[#403e57] md:text-sm">
             Deep Work
           </button>
         </div>
-        <h1 className="text-center mb-4 text-7xl tracking-wide sm:text-8xl">
+        <h1 className="text-center mb-4 text-7xl tracking-wide md:text-8xl mb-8">
           <b>25:00</b>
         </h1>
-        <div className="max-w-sm mx-auto mb-2 rounded-xl bg-[#403e57] animate-fade-in stagger-1 sm:mb-4">
-          <input
-            className="w-full px-4 py-3 rounded-xl text-text placeholder:text-text-muted outline-none transition-colors animate-fade-in  focus:border-secondary focus:ring-1"
-            type="text"
-            placeholder="What task are you focusing on?"
-          />
-        </div>
-        <div className="flex items-center justify-center gap-2 sm:mb-2">
+        <div className="flex items-center justify-center gap-2 mb-2 md:mb-4">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +36,8 @@ export default function Hero() {
               />
             </svg>
           </button>
-          <button className="flex justify-center items-center w-48 py-2 rounded-xl text-xl text-zinc-950 bg-secondary">
-            <b>Pause</b>
+          <button className="flex justify-center items-center w-48 py-2 rounded-xl text-xl text-zinc-950 bg-secondary md:text-2xl">
+            <b>Start</b>
           </button>
           <button className="flex items-center transition duration-300 hover:scale-110">
             <svg
