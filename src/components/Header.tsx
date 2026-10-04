@@ -21,7 +21,7 @@ export default function Header() {
             <path d="M12 8v8" />
           </svg> */}
 
-          <h2 className="text-2xl">
+          <h2 className="text-xl">
             <strong>FocusThen</strong>
           </h2>
         </span>
