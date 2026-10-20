@@ -1,6 +1,18 @@
 import { useEffect, useState } from "react";
 
-export default function Hero() {
+type durationValues = {
+  focusDuration: number;
+  shortBreakDuration: number;
+  longBreakDuration: number;
+  deepWorkDuration: number;
+};
+
+export default function Hero({
+  focusDuration,
+  shortBreakDuration,
+  longBreakDuration,
+  deepWorkDuration,
+}: durationValues) {
   const [timeLeft, setTimeLeft] = useState(25 * 60);
   const [isRunning, setIsRunning] = useState(false);
 
@@ -48,36 +60,44 @@ export default function Hero() {
 
   function getDuration() {
     if (selectedMode === "focus") {
-      return 25;
+      return focusDuration;
     }
 
     if (selectedMode === "shortBreak") {
-      return 5;
+      return shortBreakDuration;
     }
 
     if (selectedMode === "longBreak") {
-      return 15;
+      return longBreakDuration;
     }
 
     if (selectedMode === "deepWork") {
-      return 50;
+      return deepWorkDuration;
     }
 
-    return 25;
+    return focusDuration;
   }
 
   useEffect(() => {
     const duration = getDuration();
-
     setTimeLeft(duration * 60);
-  }, [selectedMode]);
+  }, [
+    selectedMode,
+    focusDuration,
+    shortBreakDuration,
+    longBreakDuration,
+    deepWorkDuration,
+  ]);
 
   return (
     <section className="min-w-0 w-full mx-auto max-w-lg px-1 mb-6">
       <div className="w-full rounded-xl p-6 bg-surface md:p-12">
         <div className="flex flex-wrap justify-center gap-2 mb-6 md:mb-8">
           <button
-            onClick={() => setSelectedMode("focus")}
+            onClick={() => {
+              setIsRunning(false);
+              setSelectedMode("focus");
+            }}
             className={
               selectedMode === "focus"
                 ? "px-3 py-2 rounded-2xl text-white-900 text-xs transition-colors bg-[#403e57] md:text-sm"
@@ -87,7 +107,10 @@ export default function Hero() {
             Focus duration
           </button>
           <button
-            onClick={() => setSelectedMode("shortBreak")}
+            onClick={() => {
+              setIsRunning(false);
+              setSelectedMode("shortBreak");
+            }}
             className={
               selectedMode === "shortBreak"
                 ? "px-3 py-2 rounded-2xl text-white-900 text-xs transition-colors bg-[#403e57] md:text-sm"
@@ -97,7 +120,10 @@ export default function Hero() {
             Short Break
           </button>
           <button
-            onClick={() => setSelectedMode("longBreak")}
+            onClick={() => {
+              setIsRunning(false);
+              setSelectedMode("longBreak");
+            }}
             className={
               selectedMode === "longBreak"
                 ? "px-3 py-2 rounded-2xl text-white-900 text-xs transition-colors bg-[#403e57] md:text-sm"
@@ -107,7 +133,10 @@ export default function Hero() {
             Long Break
           </button>
           <button
-            onClick={() => setSelectedMode("deepWork")}
+            onClick={() => {
+              setIsRunning(false);
+              setSelectedMode("deepWork");
+            }}
             className={
               selectedMode === "deepWork"
                 ? "px-3 py-2 rounded-2xl text-white-900 text-xs transition-colors bg-[#403e57] md:text-sm"
